@@ -16,7 +16,7 @@ chmod +x /usr/bin/composer
 
 php --version  
 
-Dependencies installation will take some time. After than set proper permissions on files.  
+**Dependencies installation will take some time. After than set proper permissions on files.**  
 sudo chown -R ec2-user:apache /var/www  
 sudo chmod 2775 /var/www && find /var/www -type d -exec sudo chmod 2775 {} \;  
 find /var/www -type f -exec sudo chmod 0664 {} \;  
@@ -30,10 +30,10 @@ composer install
 cp .env.example .env  
 php artisan key:generate  
 
-Set the host:  
+**Set the host:**  
 sudo vim /etc/httpd/conf/httpd.conf   
-Add the File bottom  
 
+**Add the File bottom**  
 `
 <VirtualHost *:80>  
 ServerName laravel.example.com  
