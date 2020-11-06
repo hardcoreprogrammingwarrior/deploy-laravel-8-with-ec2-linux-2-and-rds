@@ -1,4 +1,5 @@
 # How to Speedrun Deploy  Laravel 8 with ec2 Linux 2 and RDS within 14mins
+https://youtu.be/mBEdFlw4ybc
 
 sudo yum update -y  
 sudo amazon-linux-extras enable php7.4 -y  
@@ -39,3 +40,5 @@ sudo vim /etc/httpd/conf/httpd.conf
 sudo systemctl start httpd  
 sudo systemctl start php-fpm  
 sudo systemctl enable php-fpm  
+
+Since Nov 3, 2020
