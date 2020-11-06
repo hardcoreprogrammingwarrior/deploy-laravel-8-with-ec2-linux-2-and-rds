@@ -39,15 +39,16 @@ $ sudo vim /etc/httpd/conf/httpd.conf
 ```
 
 **Add the File bottom**  
-`
+
+```blade
 <VirtualHost *:80>  
-ServerName laravel.example.com  
-DocumentRoot /var/www/html/speedrun/public  
-<Directory /var/www/html/speedrun>  
-AllowOverride All  
-</Directory>  
+	ServerName laravel.example.com  
+	DocumentRoot /var/www/html/speedrun/public  
+	<Directory /var/www/html/speedrun>  
+		AllowOverride All  
+	</Directory>  
 </VirtualHost>  
-` 
+```  
 
 ```sh
 $ sudo systemctl start httpd  
