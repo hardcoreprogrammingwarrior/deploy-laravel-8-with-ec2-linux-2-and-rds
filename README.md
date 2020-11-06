@@ -1,6 +1,6 @@
 # How to Speedrun Deploy  Laravel 8 with ec2 Linux 2 and RDS within 14mins
 
-sudo yum update -y
+sudo yum update -y  
 sudo amazon-linux-extras enable php7.4 -y
 sudo yum clean metadata
 sudo yum install  -y php php-{pear,cgi,common,curl,mbstring,gd,mysqlnd,gettext,bcmath,json,xml,fpm,intl,zip,imap}
