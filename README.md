@@ -28,13 +28,13 @@ php artisan key:generate
 // Set the host:
 sudo vim /etc/httpd/conf/httpd.conf   
 // Add the File bottom
-<VirtualHost *:80>
-       ServerName laravel.example.com
-       DocumentRoot /var/www/html/speedrun/public
-<Directory /var/www/html/speedrun>
-              AllowOverride All
-       </Directory>
-</VirtualHost>
+<VirtualHost *:80>  
+       ServerName laravel.example.com  
+       DocumentRoot /var/www/html/speedrun/public  
+<Directory /var/www/html/speedrun>  
+              AllowOverride All  
+       </Directory>  
+</VirtualHost>  
 
 sudo systemctl start httpd  
 sudo systemctl start php-fpm  
