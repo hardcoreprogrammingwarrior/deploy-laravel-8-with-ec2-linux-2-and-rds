@@ -41,7 +41,7 @@ DocumentRoot /var/www/html/speedrun/public
 <Directory /var/www/html/speedrun>  
 AllowOverride All  
 </Directory>  
-</VirtualHost>
+</VirtualHost>  
 ` 
 
 sudo systemctl start httpd  
