@@ -3,6 +3,8 @@ Watch it here https://youtu.be/mBEdFlw4ybc
 Laravel v8.12.3 (PHP v7.4.11) Mysql 8.0  
 Since Nov 3, 2020  
 
+---  
+
 sudo yum update -y  
 sudo amazon-linux-extras enable php7.4 -y  
 sudo yum clean metadata  
@@ -14,7 +16,7 @@ chmod +x /usr/bin/composer
 
 php --version  
 
-// Dependencies installation will take some time. After than set proper permissions on files.  
+Dependencies installation will take some time. After than set proper permissions on files.  
 sudo chown -R ec2-user:apache /var/www  
 sudo chmod 2775 /var/www && find /var/www -type d -exec sudo chmod 2775 {} \;  
 find /var/www -type f -exec sudo chmod 0664 {} \;  
@@ -28,16 +30,19 @@ composer install
 cp .env.example .env  
 php artisan key:generate  
 
-// Set the host:  
+Set the host:  
 sudo vim /etc/httpd/conf/httpd.conf   
-// Add the File bottom  
+Add the File bottom  
+
+`
 <VirtualHost *:80>  
-       ServerName laravel.example.com  
-       DocumentRoot /var/www/html/speedrun/public  
+ServerName laravel.example.com  
+DocumentRoot /var/www/html/speedrun/public  
 <Directory /var/www/html/speedrun>  
-              AllowOverride All  
-       </Directory>  
-</VirtualHost>  
+AllowOverride All  
+</Directory>  
+</VirtualHost>
+` 
 
 sudo systemctl start httpd  
 sudo systemctl start php-fpm  
